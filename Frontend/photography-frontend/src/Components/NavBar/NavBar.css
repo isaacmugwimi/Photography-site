@@ -1,0 +1,78 @@
+header {
+  width: 100%;
+  position: absolute; /* Sits on top of the hero image */
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background: transparent; /* Matches the dark background of the image */
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1.5rem 2rem;
+  /* background-color: red; */
+}
+
+/* Logo: All caps, Serif font, White */
+.logo {
+  font-family:
+    "Playfair Display", serif; /* Use a serif font for that premium look */
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* Nav Links */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 2.5rem;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #d1d1d1; /* Slightly muted white */
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #ffffff;
+}
+
+/* The Gold "Book Now" Button */
+.book-now-btn button {
+  background-color: #c5a367; /* The specific gold/tan color from the image */
+  color: #000000;
+  border: none;
+  padding: 0.7rem 1.8rem;
+  border-radius: 50px; /* Pill shape */
+  /* font-weight: 600; */
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.book-now-btn button:hover {
+  background-color: #b38f56;
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .navbar {
+    padding: 1.5rem 2rem;
+  }
+  .nav-links {
+    display: none; /* Usually hidden on mobile in favor of a burger menu */
+  }
+}
