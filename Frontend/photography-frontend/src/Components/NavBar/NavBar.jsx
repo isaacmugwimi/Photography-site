@@ -6,7 +6,7 @@ const NavBar = () => {
   return (
     <header>
       <nav className="navbar">
-        <div className="logo">Lens.</div>
+        <div className="logo">Focus Pixel.</div>
         <ul className="nav-links">
           <li>
             <Link to="/">Home</Link>
