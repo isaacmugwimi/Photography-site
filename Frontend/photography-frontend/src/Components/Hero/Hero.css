@@ -26,14 +26,16 @@
 /* Tagline */
 .hero-tag {
   display: flex;
+  justify-content: center;
   align-items: center;
+  padding: 10px;
   gap: 10px;
   color: #fd853d;
   text-transform: uppercase;
   font-size: 0.7rem;
   font-weight: 600;
   letter-spacing: 2px;
-  margin-bottom: 1.5rem;
+  border: 1px solid #666;
 }
 
 .hero-dot {
@@ -72,7 +74,7 @@
 /* Typography */
 .hero h1 {
   font-family: "Playfair Display", serif;
-  font-size: clamp(2.5rem, 4vw, 4.5rem);
+  font-size: clamp(2rem, 3vw, 3rem);
   color: #ffffff;
   line-height: 1.1;
   margin-bottom: 2.5rem;
@@ -80,18 +82,34 @@
   /* background-color: red; */
 }
 
-.hero h1 .photography {
-  font-style: italic;
-  color: #fd853d;
+.expert-text {
+  font-size: 0.5em; /* Make "Expert" smaller and elegant */
+  text-transform: uppercase;
+  display: block; /* Puts it on its own line but keeps it grouped */
+  letter-spacing: 4px;
+  margin-bottom: 10px;
+  color: silver;
+}
+
+.service-text {
+  font-size: 0.5em; /* Smaller "Services" text */
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  margin-top: 10px;
+  color: silver;
 }
 
 .hero h1 .and {
-  /* font-size: 1.5rem; */
-  color: #fd853d;
-  /* margin: 0 0.5rem; */
-  margin-left: 30%;
+  margin-left: 0; /* REMOVE that 30% margin, it's pushing the text too far */
+  font-family: "Playfair Display", serif;
+  font-style: italic;
 }
 
+
+.hero h1 .h1-main{
+color: #fd853d;
+font-style: italic;
+}
 .hero-description {
   color: silver;
   line-height: 1.6;
@@ -191,8 +209,8 @@
   height: 100%;
   max-height: 500px;
   max-width: 500px;
-  margin-bottom: 8%;
-  margin-right: 8%;
+  margin-bottom: 4%;
+  margin-right: 4%;
   background-color: transparent;
   border: 1px solid #fd853d;
   animation: slideInLeft 1.2s ease-out forwards;
@@ -205,8 +223,8 @@
   height: 100%;
   max-height: 500px;
   max-width: 500px;
-  margin-top: 8%;
-  margin-left: 8%;
+  margin-top: 4%;
+  margin-left: 4%;
   background-color: #fd853d;
   border: 1px solid transparent;
 

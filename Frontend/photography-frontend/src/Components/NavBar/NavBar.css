@@ -1,12 +1,18 @@
 header {
   width: 100%;
-  position: absolute; /* Sits on top of the hero image */
+  position: fixed; /* Change from absolute to fixed */
   top: 0;
   left: 0;
   z-index: 1000;
-  background: transparent; /* Matches the dark background of the image */
+  background: transparent;
+  transition: all 0.4s ease; /* Smooth transition for the color change */
 }
-
+header.scrolled {
+  background-color: rgba(0, 0, 0, 0.95); /* Deep dark background */
+  padding: 0.5rem 0; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid rgba(253, 133, 61, 0.2); /* Subtle orange border */
+}
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -20,7 +26,7 @@ header {
 /* Logo: All caps, Serif font, White */
 .logo {
   font-family:
-    "Playfair Display", serif; /* Use a serif font for that premium look */
+    "Playfair Display", serif;
   font-size: 1.8rem;
   font-weight: 700;
   color: #ffffff;
@@ -69,10 +75,69 @@ header {
 
 /* Responsive */
 @media (max-width: 900px) {
+
   .navbar {
-    padding: 1.5rem 2rem;
+    padding: 1.2rem 1.5rem;
   }
+
+  .logo {
+    font-size: 1.6rem;
+  }
+
   .nav-links {
-    display: none; /* Usually hidden on mobile in favor of a burger menu */
+    display: none;
   }
+
+  .book-now-btn button {
+    padding: 0.6rem 1.4rem;
+    font-size: 0.85rem;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .navbar {
+    padding: 1rem 1.2rem;
+  }
+
+  .logo {
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+  }
+
+  .book-now-btn button {
+    padding: 0.55rem 1.2rem;
+    font-size: 0.8rem;
+  }
+
+}
+@media (max-width: 480px) {
+
+  .navbar {
+    padding: 0.9rem 1rem;
+  }
+
+  .logo {
+    font-size: 1.2rem;
+  }
+
+  .book-now-btn button {
+    padding: 0.5rem 1rem;
+    font-size: 0.75rem;
+  }
+
+}
+
+@media (max-width: 360px) {
+
+  .logo {
+    font-size: 1rem;
+  }
+
+  .book-now-btn button {
+    padding: 0.45rem 0.9rem;
+    font-size: 0.7rem;
+  }
+
 }

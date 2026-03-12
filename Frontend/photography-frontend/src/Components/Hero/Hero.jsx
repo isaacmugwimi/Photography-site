@@ -30,11 +30,10 @@ const Hero = () => {
             <span>Professional Photography & Videography in Kenya</span>
           </div>
 
-          {/* Use H1 for your main keyword. "Photography and Videography" is better for SEO than just "Moments" */}
           <h1>
-            Expert <span className="photography">Photography</span> <br />{" "}
-            <span className="and">&</span> <br /> Videography Services
-          </h1>
+  <span className="expert-text">Expert</span> <span className="h1-main">Photography</span> <br /> 
+  <span className="and">and</span> <span className="h1-main">Videography</span> <span className="service-text">Services</span>
+</h1>
 
           <p className="hero-description">
             <strong>Focus Pixel</strong> provides professional photography,

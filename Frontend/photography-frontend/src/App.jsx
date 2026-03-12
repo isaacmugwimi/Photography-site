@@ -9,11 +9,12 @@ import {
 import Hero from "./Components/Hero/Hero";
 import NavBar from "./Components/NavBar/NavBar";
 import Footer from "./Components/Footer/Footer";
+import DashBoard from "./Components/Layouts/DashBoard/DashBoard";
 
 function AppRoutes() {
   return (
     <Routes>
-      <Route path="/" element={<Hero />} />
+      <Route path="/" element={<DashBoard />} />
     </Routes>
   );
 }

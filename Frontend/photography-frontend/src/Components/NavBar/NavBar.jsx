@@ -1,10 +1,25 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import "./NavBar.css"
+import "./NavBar.css";
 
 const NavBar = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // if scroll position is >50px set isScrolled to true
+      if (window.scrollY > 50) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <header>
+    <header className={isScrolled? "header scrolled" : "header"}>
       <nav className="navbar">
         <div className="logo">Focus Pixel.</div>
         <ul className="nav-links">
@@ -22,9 +37,7 @@ const NavBar = () => {
           </li>
         </ul>
         <div className="book-now-btn">
-          <button>
-            Book Now
-          </button>
+          <button>Book Now</button>
         </div>
       </nav>
     </header>
