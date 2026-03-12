@@ -185,7 +185,7 @@
   margin-bottom: 8%;
   margin-right: 8%;
   background-color: transparent;
-  border: 2px solid #fd853d;
+  border: 1px solid #fd853d;
   animation: slideInLeft 1.2s ease-out forwards;
   animation-delay: 0.3s; /* Starts slightly after page load */
   opacity: 0; /* Start hidden for the animation */
@@ -199,7 +199,7 @@
   margin-top: 8%;
   margin-left: 8%;
   background-color: #fd853d;
-  border: 2px solid transparent;
+  border: 1px solid transparent;
 
   animation: slideInRight 1.2s ease-out forwards;
   animation-delay: 0.5s;
