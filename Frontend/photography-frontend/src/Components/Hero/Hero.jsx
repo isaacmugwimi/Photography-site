@@ -1,6 +1,8 @@
 import React from "react";
 import heroImage from "../../assets/about-studio.jpg";
 import "./Hero.css";
+// import NumberCounter from "number-counter";
+import CountUp from "react-countup";
 const Hero = () => {
   return (
     <section className="hero">
@@ -25,15 +27,21 @@ const Hero = () => {
 
         <div className="hero-stats">
           <div className="hero-stat">
-            <div className="hero-stat-value">500+</div>
+            <div className="hero-stat-value">
+              <CountUp start={100} end={500} duration={2.5} /> +
+            </div>{" "}
             <div className="hero-stat-label">Projects Done</div>
           </div>
           <div className="hero-stat">
-            <div className="hero-stat-value">200+</div>
+            <div className="hero-stat-value">
+              <CountUp start={40} end={200} duration={2.5} /> +
+            </div>{" "}
             <div className="hero-stat-label">Happy Clients</div>
           </div>
           <div className="hero-stat">
-            <div className="hero-stat-value">10+</div>
+            <div className="hero-stat-value">
+              <CountUp start={0} end={10} duration={2.5} /> +
+            </div>{" "}
             <div className="hero-stat-label">Years Experience</div>
           </div>
         </div>

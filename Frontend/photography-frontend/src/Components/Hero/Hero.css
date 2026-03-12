@@ -142,6 +142,8 @@
   font-size: 1.8rem;
   color: #fd853d;
   font-weight: 600;
+  display: flex;
+  /* gap: 0 ; */
 }
 
 .hero-stat-label {
