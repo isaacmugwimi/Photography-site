@@ -320,18 +320,18 @@
   .hero-stats {
     gap: 2rem;
   }
-}
+} /* 1. Large Tablets & Small Laptops (1024px) */
 @media (max-width: 1024px) {
   .hero {
     flex-direction: column;
-    justify-content: center;
+    height: auto; /* Allow content to grow vertically */
+    padding: 120px 5% 60px; /* Space for fixed navbar */
     text-align: center;
-    padding-top: 120px;
-    height: auto;
   }
 
   .hero-content {
     max-width: 100%;
+    margin-bottom: 4rem;
   }
 
   .hero-tag,
@@ -340,108 +340,95 @@
     justify-content: center;
   }
 
+  .hero-description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .hero-content-left-image {
     width: 100%;
-    max-width: 600px;
-    height: auto;
-    margin-top: 40px;
-  }
-
-  .hero-video {
-    width: 100%;
-    max-width: 500px;
-    height: 400px;
-  }
-
-  .blob1,
-  .blob2 {
-    max-width: 500px;
-    max-height: 400px;
+    max-width: 500px; /* Keep the video container from getting too huge */
+    height: 450px;
   }
 }
 
+/* 2. Tablets & Large Phones (768px) */
 @media (max-width: 768px) {
-  .hero {
-    padding: 0 6%;
-  }
-
   .hero h1 {
-    font-size: 2.6rem;
+    font-size: 3rem;
   }
 
-  .hero-description {
-    max-width: 100%;
+  /* Fix for the stats overlapping or squishing */
+  .hero-stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns instead of a row */
+    gap: 2rem;
+    padding-top: 1.5rem;
   }
 
-  .hero-btn-section {
-    flex-direction: column;
+  /* Center the third stat if it's alone on a row */
+  .hero-stat:nth-child(3) {
+    grid-column: span 2;
     align-items: center;
-    gap: 1rem;
   }
 
-  .hero-video {
-    height: 350px;
+  .hero-stat {
+    align-items: center; /* Center the label under the number */
   }
 
-  .blob1,
-  .blob2 {
-    display: none;
+  .hero h1 .and {
+    margin-left: 0; /* Reset that 30% margin for mobile centering */
   }
 }
+
+/* 3. Small Mobile Devices (480px) */
 @media (max-width: 480px) {
   .hero {
-    padding: 0 5%;
+    padding-top: 100px;
   }
 
   .hero h1 {
-    font-size: 2rem;
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
   }
 
   .hero-description {
     font-size: 0.9rem;
+    line-height: 1.5;
   }
 
-  .hero-btns {
-    width: 100%;
-    max-width: 260px;
-    padding: 0.7rem 1.5rem;
-    font-size: 0.85rem;
-  }
-
-  .hero-video {
-    height: 280px;
-    border-radius: 20px;
-  }
-
-  .hero-stats {
+  /* Stack buttons vertically on very small screens */
+  .hero-btn-section {
     flex-direction: column;
-    gap: 1.2rem;
+    gap: 1rem;
+    width: 100%;
     align-items: center;
   }
 
-  .hero-stat-value {
-    font-size: 1.5rem;
-  }
-
-  .hero-stat-label {
-    font-size: 0.7rem;
-  }
-}
-@media (max-width: 360px) {
-  .hero h1 {
-    font-size: 1.7rem;
-  }
-
-  .hero-description {
-    font-size: 0.8rem;
-  }
-
-  .hero-video {
-    height: 240px;
-  }
-
   .hero-btns {
-    font-size: 0.8rem;
-    padding: 0.6rem 1.2rem;
+    width: 80%; /* Make buttons easier to tap */
+    padding: 0.7rem 1.5rem;
+  }
+
+  /* Single column stats for readability */
+  .hero-stats {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .hero-stat:nth-child(3) {
+    grid-column: span 1;
+  }
+
+  /* Scale the video and blobs down */
+  .hero-content-left-image {
+    height: 350px;
+  }
+
+  .blob1,
+  .blob2,
+  .hero-video {
+    max-height: 350px;
+    max-width: 350px;
   }
 }
