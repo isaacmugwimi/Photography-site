@@ -31,9 +31,12 @@ const Hero = () => {
           </div>
 
           <h1>
-  <span className="expert-text">Expert</span> <span className="h1-main">Photography</span> <br /> 
-  <span className="and">and</span> <span className="h1-main">Videography</span> <span className="service-text">Services</span>
-</h1>
+            <span className="expert-text">Expert</span>{" "}
+            <span className="h1-main">Photography</span> <br />
+            <span className="and">and</span>{" "}
+            <span className="h1-main">Videography</span>{" "}
+            <span className="service-text">Services</span>
+          </h1>
 
           <p className="hero-description">
             <strong>Focus Pixel</strong> provides professional photography,

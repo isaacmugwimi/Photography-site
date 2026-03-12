@@ -36,6 +36,7 @@
   font-weight: 600;
   letter-spacing: 2px;
   border: 1px solid #666;
+  margin-bottom: 18%;
 }
 
 .hero-dot {
@@ -114,7 +115,8 @@ font-style: italic;
   color: silver;
   line-height: 1.6;
   font-size: 1rem;
-  margin-bottom: 2.5rem;
+  margin-bottom:3rem;
+  margin-top:3rem;
   max-width: 500px;
 }
 
@@ -122,7 +124,7 @@ font-style: italic;
 .hero-btn-section {
   display: flex;
   gap: 1.5rem;
-  margin-bottom: 4rem;
+  margin-bottom: 5rem;
 }
 
 .hero-btns {
@@ -382,15 +384,15 @@ font-style: italic;
     grid-template-columns: repeat(2, 1fr); /* 2 columns instead of a row */
     gap: 2rem;
     padding-top: 1.5rem;
+    
   }
 
-  /* Center the third stat if it's alone on a row */
-  .hero-stat:nth-child(3) {
-    grid-column: span 2;
-    align-items: center;
-  }
+
 
   .hero-stat {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
     align-items: center; /* Center the label under the number */
   }
 
