@@ -1,268 +1,206 @@
+/* --- Global Resets --- */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  overflow-x: hidden; /* Prevents horizontal scroll from animations */
+}
+
+/* --- Hero Section Container --- */
 .hero {
   min-height: 100vh;
   width: 100%;
   background:
-    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
+    linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)),
     url("../../assets/hero-photographer.jpg");
   background-size: cover;
   background-position: center;
   display: flex;
+  flex-direction: column; /* Stack vertically for mobile */
   align-items: center;
-  padding: 0 5%;
+  justify-content: center;
+  padding: 100px 5% 60px; /* Padding for top navbar and bottom spacing */
   color: #fff;
+  position: relative;
 }
 
+/* --- Left Side: Text Content --- */
 .hero-content {
-  flex: 1;
+  width: 100%;
   max-width: 650px;
+  text-align: center;
+  margin-bottom: 4rem; /* Spacing before the image on mobile */
   animation: fadeInUp 1s ease-out forwards;
 }
 
-/* Tagline */
 .hero-tag {
-  display: flex;
-  justify-content: center;
+  display: inline-flex;
   align-items: center;
-  padding: 10px;
+  padding: 8px 16px;
   gap: 10px;
   color: #fd853d;
   text-transform: uppercase;
   font-size: 0.7rem;
   font-weight: 600;
   letter-spacing: 2px;
-  border: 1px solid #666;
+  border: 1px solid rgba(255, 255, 255, 0.2);
   margin-bottom: 2rem;
 }
 
 .hero-dot {
-  width: 6px;
-  height: 6px;
+  width: 8px;
+  height: 8px;
   background-color: #fd853d;
   border-radius: 50%;
   position: relative;
 }
-.hero-dot::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 20px;
-  height: 20px;
-  background-color: #fd853d;
-  opacity: 0.6;
-  border-radius: 50%;
-  animation: pulse 2s infinite ease-out;
-}
-@keyframes pulse {
-  0% {
-    width: 6px;
-    height: 6px;
-    opacity: 0.8;
-  }
-  100% {
-    width: 25px; /* How far the shimmer spreads */
-    height: 25px;
-    opacity: 0;
-  }
-}
 
-/* Typography */
 .hero h1 {
   font-family: "Playfair Display", serif;
-  font-size: clamp(2rem, 3vw, 3rem);
-  color: #ffffff;
+  font-size: clamp(2rem, 8vw, 4rem);
   line-height: 1.1;
-  margin-bottom: 2.5rem;
-  margin-top: 3rem;
-  /* background-color: red; */
+  margin-bottom: 1.5rem;
 }
 
-.expert-text {
-  font-size: 0.5em; /* Make "Expert" smaller and elegant */
-  text-transform: uppercase;
-  display: block; /* Puts it on its own line but keeps it grouped */
-  letter-spacing: 4px;
-  margin-bottom: 10px;
-  color: silver;
-}
-
-.service-text {
-  font-size: 0.5em; /* Smaller "Services" text */
-  text-transform: uppercase;
-  letter-spacing: 4px;
-  margin-top: 10px;
-  color: silver;
-}
-
-.hero h1 .and {
-  margin-left: 0; /* REMOVE that 30% margin, it's pushing the text too far */
-  font-family: "Playfair Display", serif;
-  font-style: italic;
-}
-
-.hero h1 .h1-main {
+.h1-main {
   color: #fd853d;
   font-style: italic;
 }
+
+.expert-text,
+.service-text {
+  font-size: 0.45em;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: silver;
+  display: block;
+  margin: 5px 0;
+}
+
 .hero-description {
   color: silver;
-  line-height: 1.6;
   font-size: 1rem;
-
-  margin: 1.5rem 0;
-
+  line-height: 1.6;
+  margin: 0 auto 2rem;
   max-width: 500px;
 }
 
-/* Buttons Section */
+/* --- Buttons --- */
 .hero-btn-section {
   display: flex;
-  gap: 1.5rem;
-  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 3rem;
 }
 
 .hero-btns {
-  padding: 0.8rem 2rem;
+  padding: 0.9rem 2rem;
   border-radius: 50px;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition:
+    transform 0.3s,
+    background 0.3s;
   font-size: 0.9rem;
-}
-
-/* "View Portfolio" Primary Button */
-.hero-btns:first-child {
-  background-color: #fd853d;
   border: 1px solid #fd853d;
-  color: #ffffff;
 }
 
-/* "Explore Courses" Secondary Button */
+.hero-btns:first-child {
+  background: #fd853d;
+  color: #fff;
+}
+
 .hero-btns:last-child {
-  background-color: transparent;
-  border: 1px solid rgba(192, 192, 192, 0.63);
-  color: #ffffff;
+  background: transparent;
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.4);
 }
 
 .hero-btns:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(197, 163, 103, 0.2);
+  transform: translateY(-5px);
 }
 
-/* Stats Section */
+/* --- Stats --- */
 .hero-stats {
   display: flex;
-  gap: 3rem;
-  border-top: 1px solid rgba(192, 192, 192, 0.438);
+  justify-content: center;
+  gap: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding-top: 2rem;
-
-  animation: fadeInUp 1s ease-out forwards;
-  opacity: 0;
 }
 
 .hero-stat-value {
-  font-family: "Playfair Display", serif;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   color: #fd853d;
-  font-weight: 600;
-  display: flex;
-  /* gap: 0 ; */
+  font-weight: 700;
+  font-family: "Playfair Display", serif;
 }
 
 .hero-stat-label {
+  font-size: 0.7rem;
   color: silver;
-  font-size: 0.8rem;
   text-transform: uppercase;
-  margin-top: 0.3rem;
+  margin-top: 4px;
 }
 
-/* Staggered animation for stats */
-
-.hero-stat:nth-child(1) {
-  animation-delay: 0.8s;
-}
-.hero-stat:nth-child(2) {
-  animation-delay: 1s;
-}
-.hero-stat:nth-child(3) {
-  animation-delay: 1.2s;
-}
-
-/* Container for the right side */
+/* --- Right Side: Video & Blobs --- */
 .hero-content-left-image {
-  flex: 1;
+  position: relative;
+  width: 100%;
+  max-width: 450px; /* Limits size on mobile */
+  aspect-ratio: 1 / 1; /* Keeps it square so video fills it */
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
-  z-index: 1;
-  /* background-color: red; */
-  height: clamp(350px, 40vw, 500px);
 }
-.blob1 {
-  position: absolute;
+
+.hero-video {
   width: 100%;
   height: 100%;
-  max-height: 500px;
-  max-width: 500px;
-  margin-bottom: 4%;
-  margin-right: 4%;
-  background-color: transparent;
-  border: 1px solid #fd853d;
-  animation: slideInLeft 1.2s ease-out forwards;
-  animation-delay: 0.3s; /* Starts slightly after page load */
-  opacity: 0; /* Start hidden for the animation */
+  z-index: 5;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
 }
+
+.hero-video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Forces video to fill the square */
+  display: block;
+}
+
+/* --- Decorative Blobs --- */
+.blob1,
 .blob2 {
   position: absolute;
   width: 100%;
   height: 100%;
-  max-height: 500px;
-  max-width: 500px;
-  margin-top: 4%;
-  margin-left: 4%;
-  background-color: #fd853d;
-  border: 1px solid transparent;
-
-  animation: slideInRight 1.2s ease-out forwards;
-  animation-delay: 0.5s;
-  opacity: 0;
+  top: 0;
+  left: 0;
 }
 
-/* For the Orange Blobs */
-@keyframes slideInRight {
-  from {
-    opacity: 0;
-    transform: translateX(100px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+.blob1 {
+  border: 2px solid #fd853d;
+  transform: translate(-15px, -15px);
+  z-index: 1;
 }
 
-@keyframes slideInLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-100px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+.blob2 {
+  background: #fd853d;
+  transform: translate(15px, 15px);
+  z-index: 0;
 }
 
-/* For the Text Content */
+/* --- Animations --- */
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(40px);
   }
   to {
     opacity: 1;
@@ -270,54 +208,43 @@
   }
 }
 
-.hero-video {
-  /* ... keep your existing styles ... */
-  animation: fadeInUp 1.5s ease-out forwards;
-  animation-delay: 0.2s;
-  opacity: 0;
-}
+/* --- Media Queries --- */
 
-/* Video Wrapper: Defines the shape and "frame" */
-.hero-video {
-  width: 100%;
-  height: 100%;
-  max-width: 500px;
-
-  max-height: 500px;
-  border: 2px solid transparent;
-  z-index: 10;
-  background: transparent;
-  position: relative;
-}
-.hero-video::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.25);
-}
-
-/* The actual Video element */
-.hero-video video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-@media (min-width: 1440px) {
+/* Tablets and Laptops */
+@media (min-width: 1024px) {
   .hero {
-    padding: 0 4%;
-  }
-  .hero-tag {
-    margin-bottom: 1rem;
+    flex-direction: row; /* Switch to side-by-side */
+    text-align: left;
+    gap: 8%;
+    padding: 0 5%;
   }
 
   .hero-content {
-    max-width: 700px;
+    text-align: left;
+    margin-bottom: 0;
+    flex: 1;
   }
 
-  .hero-video {
+  .hero-tag,
+  .hero-btn-section,
+  .hero-stats {
+    justify-content: flex-start;
+  }
+
+  .hero-description {
+    margin: 1.5rem 0 2.5rem 0;
+  }
+
+  .hero-content-left-image {
+    flex: 0.8;
     max-width: 550px;
-    max-height: 550px;
+  }
+}
+
+/* Large Desktop */
+@media (min-width: 1440px) {
+  .hero-content-left-image {
+    max-width: 650px;
   }
 
   .hero h1 {
@@ -325,176 +252,19 @@
   }
 }
 
-@media (max-width: 1440px) {
-  .hero {
-    padding: 0 3%;
-  }
-  .hero-tag {
-    margin-bottom: 1rem;
-  }
-  .hero-video {
-    max-width: 400px;
-    max-height: 400px;
-  }
-  .blob1 {
-    max-height: 400px;
-    max-width: 400px;
-  }
-  .blob2 {
-    max-height: 400px;
-    max-width: 400px;
-  }
-
-  .hero h1 {
-    font-family: "Playfair Display", serif;
-    font-size: clamp(1.5rem, 3vw, 3rem);
-
-    margin-bottom: 1.5rem;
-    margin-top: 2rem;
-  }
-  .hero-description {
-    line-height: 1.2;
-    font-size: 0.9rem;
-
-    margin: 1.5rem 0;
-
-    max-width: 500px;
-  }
-}
-
-@media (max-width: 1200px) {
-  .hero {
-    padding: 0 6%;
-  }
-
-  .hero-content {
-    max-width: 550px;
-  }
-
-  .hero-video {
-    max-width: 450px;
-    max-height: 450px;
-  }
-
-  .hero-stats {
-    gap: 2rem;
-  }
-} /* 1. Large Tablets & Small Laptops (1024px) */
-@media (max-width: 1024px) {
-  .hero {
-    flex-direction: column;
-    height: auto; /* Allow content to grow vertically */
-    padding: 120px 5% 60px; /* Space for fixed navbar */
-    text-align: center;
-  }
-
-  .hero-content {
-    max-width: 100%;
-    margin-bottom: 4rem;
-  }
-
-  .hero-tag,
-  .hero-btn-section,
-  .hero-stats {
-    justify-content: center;
-  }
-
-  .hero-description {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .hero-content-left-image {
-    width: 100%;
-    max-width: 500px; /* Keep the video container from getting too huge */
-    height: 450px;
-  }
-}
-
-/* 2. Tablets & Large Phones (768px) */
-@media (max-width: 768px) {
-  .hero h1 {
-    font-size: 3rem;
-  }
-
-  /* Fix for the stats overlapping or squishing */
-  .hero-stats {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 columns instead of a row */
-    gap: 2rem;
-    padding-top: 1.5rem;
-  }
-
-  .hero-stat {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    align-items: center; /* Center the label under the number */
-  }
-
-  .hero h1 .and {
-    margin-left: 0; /* Reset that 30% margin for mobile centering */
-  }
-}
-@media (max-width: 600px) {
-  .blob1,
-  .blob2,
-  .hero-video {
-    /* max-height: 350px;
-    max-width: 350px; */
-    display: none; /* Hide the video and blobs on very small screens for better performance and layout */
-  }
-}
-
-/* 3. Small Mobile Devices (480px) */
+/* Small Mobile Adjustments */
 @media (max-width: 480px) {
-  .hero {
-    padding-top: 100px;
-  }
-
-  .hero h1 {
-    font-size: 2.2rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .hero-description {
-    font-size: 0.9rem;
-    line-height: 1.5;
-  }
-
-  /* Stack buttons vertically on very small screens */
-  .hero-btn-section {
+  .hero-stats {
     flex-direction: column;
-    gap: 1rem;
-    width: 100%;
+    gap: 1.5rem;
     align-items: center;
   }
 
   .hero-btns {
-    width: 80%; /* Make buttons easier to tap */
-    padding: 0.7rem 1.5rem;
+    width: 100%;
   }
 
-  /* Single column stats for readability */
-  .hero-stats {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-
-  .hero-stat:nth-child(3) {
-    grid-column: span 1;
-  }
-
-  /* Scale the video and blobs down */
   .hero-content-left-image {
-    height: 350px;
-  }
-
-  .blob1,
-  .blob2,
-  .hero-video {
-    /* max-height: 350px;
-    max-width: 350px; */
-    display: none; /* Hide the video and blobs on very small screens for better performance and layout */
+    max-width: 300px; /* Smaller square for small phones */
   }
 }

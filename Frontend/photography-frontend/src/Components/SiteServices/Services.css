@@ -1,7 +1,6 @@
 .services {
   background: #0a0a0a;
   color: #fff;
-
   padding: 120px 6%;
 }
 
@@ -9,9 +8,7 @@
 
 .section-header {
   text-align: center;
-
   max-width: 700px;
-
   margin: auto;
   margin-bottom: 70px;
 }
@@ -20,29 +17,22 @@
   color: #c5a367;
 
   text-transform: uppercase;
-
   font-size: 0.8rem;
 
   letter-spacing: 3px;
-
   margin-bottom: 10px;
 }
 
 .section-title {
   font-family: "Playfair Display", serif;
-
   font-size: 3rem;
-
   margin-bottom: 20px;
-
   color: #fff;
 }
 
 .section-subtitle {
   color: #9e9e9e;
-
   font-size: 1rem;
-
   line-height: 1.6;
 }
 
@@ -50,9 +40,7 @@
 
 .services-grid {
   display: grid;
-
   grid-template-columns: repeat(3, 1fr);
-
   gap: 30px;
 }
 
@@ -60,28 +48,35 @@
 
 .service-card {
   background: #111;
-
   border: 1px solid rgba(255, 255, 255, 0.08);
-
   padding: 35px;
-
   border-radius: 12px;
-
   transition: all 0.3s ease;
-
   position: relative;
 
-  overflow: hidden;
+  overflow: hiddn;
 }
 
 /* HOVER EFFECT */
 
 .service-card:hover {
   transform: translateY(-8px);
-
   border-color: #c5a367;
-
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+.service-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 2px;
+  background: #c5a367;
+  transform: scaleX(0);
+  transition: 0.4s;
+}
+
+.service-card:hover::before {
+  transform: scaleX(1);
 }
 
 /* ICON */
@@ -89,17 +84,12 @@
 .service-icon {
   width: 50px;
   height: 50px;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   background: rgba(197, 163, 103, 0.08);
-
   border-radius: 10px;
-
   color: #c5a367;
-
   margin-bottom: 20px;
 }
 
@@ -107,11 +97,8 @@
 
 .service-title {
   font-family: "Playfair Display", serif;
-
   font-size: 1.3rem;
-
   margin-bottom: 12px;
-
   color: #fff;
 }
 
@@ -119,9 +106,7 @@
 
 .service-description {
   color: #9e9e9e;
-
   font-size: 0.95rem;
-
   line-height: 1.6;
 }
 
