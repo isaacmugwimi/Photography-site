@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 .hero {
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   background:
     linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
@@ -36,7 +36,7 @@
   font-weight: 600;
   letter-spacing: 2px;
   border: 1px solid #666;
-  margin-bottom: 18%;
+  margin-bottom: 2rem;
 }
 
 .hero-dot {
@@ -106,17 +106,17 @@
   font-style: italic;
 }
 
-
-.hero h1 .h1-main{
-color: #fd853d;
-font-style: italic;
+.hero h1 .h1-main {
+  color: #fd853d;
+  font-style: italic;
 }
 .hero-description {
   color: silver;
   line-height: 1.6;
   font-size: 1rem;
-  margin-bottom:3rem;
-  margin-top:3rem;
+
+  margin: 1.5rem 0;
+
   max-width: 500px;
 }
 
@@ -124,7 +124,7 @@ font-style: italic;
 .hero-btn-section {
   display: flex;
   gap: 1.5rem;
-  margin-bottom: 5rem;
+  margin-bottom: 2rem;
 }
 
 .hero-btns {
@@ -203,7 +203,7 @@ font-style: italic;
   position: relative;
   z-index: 1;
   /* background-color: red; */
-  height: 500px;
+  height: clamp(350px, 40vw, 500px);
 }
 .blob1 {
   position: absolute;
@@ -281,12 +281,11 @@ font-style: italic;
 .hero-video {
   width: 100%;
   height: 100%;
-  max-width: 500px; /* Adjust based on your preference */
+  max-width: 500px; 
 
-  max-height: 500px; /* Ensure it doesn't exceed the container */
-  overflow: hidden;
+  max-height: 500px; 
   border: 2px solid transparent;
-  z-index: 10; /* Ensures it sits above the hero background */
+  z-index: 10; 
   background: transparent;
   position: relative;
 }
@@ -306,7 +305,11 @@ font-style: italic;
 }
 @media (min-width: 1440px) {
   .hero {
-    padding: 0 10%;
+   
+    padding: 0 4%;
+  }
+  .hero-tag {
+    margin-bottom: 1rem;
   }
 
   .hero-content {
@@ -321,6 +324,56 @@ font-style: italic;
   .hero h1 {
     font-size: 5rem;
   }
+
+ 
+
+ 
+}
+
+@media (max-width: 1440px) {
+ .hero {
+  
+    padding: 0 3%;
+  }
+  .hero-tag {
+    margin-bottom: 1rem;
+  }
+   .hero-video {
+    max-width: 400px;
+    max-height: 400px;
+  }
+  .blob1 {
+  
+  max-height: 400px;
+  max-width: 400px;
+}
+.blob2 {
+  
+  max-height: 400px;
+  max-width: 400px;
+
+}
+
+.hero h1 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(1.5rem, 3vw, 3rem);
+  
+  margin-bottom: 1.5rem;
+  margin-top: 2rem;
+
+}
+.hero-description {
+  line-height: 1.2;
+  font-size: 0.9rem;
+
+  margin: 1.5rem 0;
+
+  max-width: 500px;
+}
+
+
+
+
 }
 
 @media (max-width: 1200px) {
@@ -384,10 +437,7 @@ font-style: italic;
     grid-template-columns: repeat(2, 1fr); /* 2 columns instead of a row */
     gap: 2rem;
     padding-top: 1.5rem;
-    
   }
-
-
 
   .hero-stat {
     display: flex;
