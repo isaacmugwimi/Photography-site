@@ -5,6 +5,7 @@ import CountUp from "react-countup";
 import { Helmet } from "react-helmet-async";
 
 const Hero = () => {
+  console.log(window.innerWidth, window.innerHeight);
   return (
     <>
       <Helmet>
