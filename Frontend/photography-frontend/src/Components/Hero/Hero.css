@@ -281,11 +281,11 @@
 .hero-video {
   width: 100%;
   height: 100%;
-  max-width: 500px; 
+  max-width: 500px;
 
-  max-height: 500px; 
+  max-height: 500px;
   border: 2px solid transparent;
-  z-index: 10; 
+  z-index: 10;
   background: transparent;
   position: relative;
 }
@@ -305,7 +305,6 @@
 }
 @media (min-width: 1440px) {
   .hero {
-   
     padding: 0 4%;
   }
   .hero-tag {
@@ -324,56 +323,43 @@
   .hero h1 {
     font-size: 5rem;
   }
-
- 
-
- 
 }
 
 @media (max-width: 1440px) {
- .hero {
-  
+  .hero {
     padding: 0 3%;
   }
   .hero-tag {
     margin-bottom: 1rem;
   }
-   .hero-video {
+  .hero-video {
     max-width: 400px;
     max-height: 400px;
   }
   .blob1 {
-  
-  max-height: 400px;
-  max-width: 400px;
-}
-.blob2 {
-  
-  max-height: 400px;
-  max-width: 400px;
+    max-height: 400px;
+    max-width: 400px;
+  }
+  .blob2 {
+    max-height: 400px;
+    max-width: 400px;
+  }
 
-}
+  .hero h1 {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(1.5rem, 3vw, 3rem);
 
-.hero h1 {
-  font-family: "Playfair Display", serif;
-  font-size: clamp(1.5rem, 3vw, 3rem);
-  
-  margin-bottom: 1.5rem;
-  margin-top: 2rem;
+    margin-bottom: 1.5rem;
+    margin-top: 2rem;
+  }
+  .hero-description {
+    line-height: 1.2;
+    font-size: 0.9rem;
 
-}
-.hero-description {
-  line-height: 1.2;
-  font-size: 0.9rem;
+    margin: 1.5rem 0;
 
-  margin: 1.5rem 0;
-
-  max-width: 500px;
-}
-
-
-
-
+    max-width: 500px;
+  }
 }
 
 @media (max-width: 1200px) {
@@ -450,6 +436,15 @@
     margin-left: 0; /* Reset that 30% margin for mobile centering */
   }
 }
+@media (max-width: 600px) {
+  .blob1,
+  .blob2,
+  .hero-video {
+    /* max-height: 350px;
+    max-width: 350px; */
+    display: none; /* Hide the video and blobs on very small screens for better performance and layout */
+  }
+}
 
 /* 3. Small Mobile Devices (480px) */
 @media (max-width: 480px) {
@@ -498,7 +493,8 @@
   .blob1,
   .blob2,
   .hero-video {
-    max-height: 350px;
-    max-width: 350px;
+    /* max-height: 350px;
+    max-width: 350px; */
+    display: none; /* Hide the video and blobs on very small screens for better performance and layout */
   }
 }
