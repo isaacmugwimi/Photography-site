@@ -21,11 +21,32 @@ const Services = () => {
 
   const [activeFilter, setActiveFilter] = useState("All");
 
+  const [visibleCount, setVisibleCount] = useState(9);
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 768) {
+        setVisibleCount(5);
+      } else {
+        setVisibleCount(9);
+      }
+    };
+    handleResize(); // Run on mount
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   const filteredServices =
     activeFilter === "All"
       ? servicesData
       : servicesData.filter((service) => service.category == activeFilter);
+
+  const displayedServices = filteredServices.slice(0, visibleCount);
   const categories = ["All", "Photo", "Video", "Design"];
+
+  const handleLoadMore = () => {
+    console.log("first");
+    setVisibleCount((prev) => prev + 6);
+  };
 
   return (
     <section className="services">
@@ -45,7 +66,10 @@ const Services = () => {
             <button
               key={cat}
               className={`filter-btn ${activeFilter === cat ? "active" : ""}`}
-              onClick={() => setActiveFilter(cat)}
+              onClick={() => {
+                setActiveFilter(cat);
+                setVisibleCount(window.innerWidth <= 768 ? 5 : 9);
+              }}
             >
               {cat}
             </button>
@@ -54,7 +78,7 @@ const Services = () => {
       </div>
 
       <div className="services-grid">
-        {filteredServices.map((service) => (
+        {displayedServices.map((service) => (
           <ServiceCard
             key={service.id}
             iconName={service.icon_name}
@@ -63,6 +87,13 @@ const Services = () => {
           />
         ))}
       </div>
+      {visibleCount < filteredServices.length && (
+        <div className="load-more-container">
+          <button className="load-more-btn" onClick={handleLoadMore}>
+            Load More Services
+          </button>
+        </div>
+      )}
     </section>
   );
 };
