@@ -1,22 +1,41 @@
-[
-  { "id": 1, "category": "Photo", "icon_name": "camera", "title": "Portrait Photography", "description": "Professional studio and outdoor portrait sessions with high-end retouching." },
-  { "id": 2, "category": "Video", "icon_name": "video", "title": "Cinematic Videography", "description": "High-quality video production for brand stories and documentaries in 4K." },
-  { "id": 3, "category": "Design", "icon_name": "palette", "title": "Brand Identity Design", "description": "Visual storytelling through custom logos, typography, and color palettes." },
-  { "id": 4, "category": "Photo", "icon_name": "film", "title": "Event Coverage", "description": "Comprehensive photo and video coverage for weddings and corporate launches." },
-  { "id": 5, "category": "Video", "icon_name": "clapperboard", "title": "Post-Production", "description": "Expert video editing, color grading, and sound design for a polished finish." },
-  { "id": 6, "category": "Design", "icon_name": "layers", "title": "Social Media Content", "description": "Aesthetic imagery and vertical video tailored for Instagram and TikTok." },
-  { "id": 7, "category": "Photo", "icon_name": "monitor", "title": "Digital Retouching", "description": "Advanced photo manipulation and skin retouching for flawless results." },
-  { "id": 8, "category": "Photo", "icon_name": "aperture", "title": "Commercial Shoots", "description": "High-impact product photography designed to boost marketing materials." },
-  { "id": 9, "category": "Video", "icon_name": "play", "title": "Music Video Production", "description": "Creative visual concepts and high-energy filming for musical artists." },
-  { "id": 10, "category": "Design", "icon_name": "pen-tool", "title": "Vector Illustration", "description": "Custom digital illustrations and icons for web and print applications." },
-  { "id": 11, "category": "Photo", "icon_name": "mountain", "title": "Landscape Photography", "description": "Stunning nature and architectural shots for travel and decor industries." },
-  { "id": 12, "category": "Video", "icon_name": "mic", "title": "Podcast Production", "description": "Professional multi-cam video recording and audio syncing for podcasts." },
-  { "id": 13, "category": "Design", "icon_name": "layout", "title": "UI/UX Design", "description": "Designing intuitive and visually appealing interfaces for apps and websites." },
-  { "id": 14, "category": "Photo", "icon_name": "user", "title": "Corporate Headshots", "description": "Consistent and professional headshots for team pages and LinkedIn." },
-  { "id": 15, "category": "Video", "icon_name": "tv", "title": "TV Commercials", "description": "High-budget video production for television and streaming advertisements." },
-  { "id": 16, "category": "Design", "icon_name": "printer", "title": "Print Design", "description": "Brochures, business cards, and physical marketing collateral design." },
-  { "id": 17, "category": "Photo", "icon_name": "shopping-bag", "title": "E-commerce Photography", "description": "Clean, high-quality product shots specifically for online marketplaces." },
-  { "id": 18, "category": "Video", "icon_name": "scissors", "title": "Video Restoration", "description": "Up-scaling and cleaning up older footage for modern viewing." },
-  { "id": 19, "category": "Design", "icon_name": "smartphone", "title": "App Icon Design", "description": "Creating unique and recognizable icons for mobile applications." },
-  { "id": 20, "category": "Photo", "icon_name": "baby", "title": "Newborn Photography", "description": "Patience-led, gentle photography sessions for infants and families." }
-]
+
+
+
+ [
+    {
+      "id": 1,
+      "title": "Photography",
+      "description": "Professional photography for portraits, products, events, and commercial projects. High-quality images that tell your story.",
+      "icon_name": "camera"
+    },
+    {
+      "id": 2,
+      "title": "Videography",
+      "description": "Cinematic video production for advertisements, corporate films, weddings, and events. Full production from concept to delivery.",
+      "icon_name": "video_camera"
+    },
+    {
+      "id": 3,
+      "title": "Graphic Design",
+      "description": "Creative design solutions including branding, marketing materials, social media graphics, and visual identity systems.",
+      "icon_name": "palette"
+    },
+    {
+      "id": 4,
+      "title": "Image Editing",
+      "description": "Expert photo retouching, color grading, and post-processing. Transform your raw images into stunning visuals.",
+      "icon_name": "sparkles"
+    },
+    {
+      "id": 5,
+      "title": "Video Editing",
+      "description": "Professional video editing, color correction, motion graphics, and visual effects for polished final products.",
+      "icon_name": "television"
+    },
+    {
+      "id": 6,
+      "title": "Advertisement",
+      "description": "Complete advertising campaigns with photography, video, and design. Drive engagement and conversions with compelling visuals.",
+      "icon_name": "layout"
+    }
+  ]
