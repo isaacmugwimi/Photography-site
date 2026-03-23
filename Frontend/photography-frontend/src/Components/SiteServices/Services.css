@@ -110,6 +110,35 @@
   line-height: 1.6;
 }
 
+.filter-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 30px 0;
+}
+
+.filter-btn {
+  padding: 10px 20px;
+  border: 1px solid #ddd;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  color: white;
+}
+
+.filter-btn.active {
+  background: #000; /* Or your brand color */
+  color: #fff;
+  border-color: #000;
+}
+
+.filter-btn:hover {
+  background: #f4f4f4;
+  color: black;
+}
+
 /* RESPONSIVE */
 
 @media (max-width: 1100px) {
