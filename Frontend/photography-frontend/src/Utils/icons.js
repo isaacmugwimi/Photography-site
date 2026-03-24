@@ -17,12 +17,14 @@ import {
   Printer,
   ShoppingBag,
   Scissors,
+  Sparkles,
   Smartphone,
   Baby,
 } from "lucide-react";
 
 export const iconMap = {
   camera: Camera,
+  sparkles:Sparkles,
   video: Video,
   palette: Palette,
   film: Film,

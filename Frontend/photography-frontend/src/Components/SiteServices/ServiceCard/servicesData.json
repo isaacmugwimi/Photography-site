@@ -12,7 +12,7 @@
       "id": 2,
       "title": "Videography",
       "description": "Cinematic video production for advertisements, corporate films, weddings, and events. Full production from concept to delivery.",
-      "icon_name": "video_camera"
+      "icon_name": "video"
     },
     {
       "id": 3,
@@ -30,7 +30,7 @@
       "id": 5,
       "title": "Video Editing",
       "description": "Professional video editing, color correction, motion graphics, and visual effects for polished final products.",
-      "icon_name": "television"
+      "icon_name": "clapperboard"
     },
     {
       "id": 6,
