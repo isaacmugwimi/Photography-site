@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
+import {Link} from "react-router-dom"
 import "./Services.css";
 import axios from "axios";
 import ServiceCard from "./ServiceCard/ServiceCard";
 import servicesData from "./ServiceCard/servicesData.json";
+import { ArrowRight } from "lucide-react";
 const Services = () => {
   // const [servicesData, setServicesData] = useState([]);
 
@@ -44,8 +46,7 @@ const Services = () => {
   const categories = ["All", "Photo", "Video", "Design"];
 
   const handleLoadMore = () => {
-    console.log("first");
-    setVisibleCount((prev) => prev + 6);
+    
   };
 
   return (
@@ -59,23 +60,9 @@ const Services = () => {
           content creation services for brands, businesses, events, and personal
           projects.
         </p>
-
-        {/* Filter Buttons */}
-        <div className="filter-container">
-          {categories.map((cat) => (
-            <button
-              key={cat}
-              className={`filter-btn ${activeFilter === cat ? "active" : ""}`}
-              onClick={() => {
-                setActiveFilter(cat);
-                setVisibleCount(window.innerWidth <= 768 ? 5 : 9);
-              }}
-            >
-              {cat}
-            </button>
-          ))}
         </div>
-      </div>
+
+    
 
       <div className="services-grid">
         {displayedServices.map((service) => (
@@ -87,13 +74,14 @@ const Services = () => {
           />
         ))}
       </div>
-      {visibleCount < filteredServices.length && (
-        <div className="load-more-container">
-          <button className="load-more-btn" onClick={handleLoadMore}>
-            Load More Services
-          </button>
+   
+        <div className="view-all-container">
+          <Link to="/services" className="view-services-btn" >
+          <span className="btn-text">View All Services</span>
+          <ArrowRight className="btn-icon" size={18} />
+          </Link>
         </div>
-      )}
+      
     </section>
   );
 };

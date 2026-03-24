@@ -10,8 +10,7 @@ header {
 header.scrolled {
   background-color: rgba(0, 0, 0, 0.95); /* Deep dark background */
   padding: 0.5rem 0; 
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  border-bottom: 1px solid rgba(253, 133, 61, 0.2); /* Subtle orange border */
+  box-shadow: 0 4px 10px #d4af3731;
 }
 .navbar {
   display: flex;
