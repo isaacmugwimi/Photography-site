@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./PortFolio.css";
-import ServiceCard from "../SiteServices/ServiceCard/ServiceCard";
-import servicesData from "../SiteServices/ServiceCard/servicesData.json";
+import PortfolioCard from "./PortfolioCard";
+import portfolioData from "../PortFolio/PortfolioData.json"
+
 const Services = () => {
   // const [servicesData, setServicesData] = useState([]);
 
@@ -35,12 +36,12 @@ const Services = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const filteredServices =
+  const filteredPortfolio =
     activeFilter === "All"
-      ? servicesData
-      : servicesData.filter((service) => service.category == activeFilter);
+      ? portfolioData
+      : portfolioData.filter((portfolio) => portfolio.category == activeFilter);
 
-  const displayedServices = filteredServices.slice(0, visibleCount);
+  const displayedPortfolio = filteredPortfolio.slice(0, visibleCount);
   const categories = [
     "All",
     "Photography",
@@ -83,19 +84,20 @@ const Services = () => {
       </div>
 
       <div className="services-grid">
-        {displayedServices.map((service) => (
-          <ServiceCard
-            key={service.id}
-            iconName={service.icon_name}
-            title={service.title}
-            description={service.description}
+        {displayedPortfolio.map((portfolio) => (
+          <PortfolioCard
+            key={portfolio.id}
+            imageUrl={portfolio.image}
+            title={portfolio.title}
+            description={portfolio.description}
+            category={portfolio.category}
           />
         ))}
       </div>
-      {visibleCount < filteredServices.length && (
+      {visibleCount < filteredPortfolio.length && (
         <div className="load-more-container">
           <button className="load-more-btn" onClick={handleLoadMore}>
-            Load More Services
+            Load More
           </button>
         </div>
       )}
