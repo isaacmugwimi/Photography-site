@@ -6,7 +6,7 @@ const PortfolioCard = ({
   description,
   category,
 }) => {
-  return <div className="service-card">
+  return <div className="portfolio-card">
     
     <img 
         src={imageUrl} 
@@ -14,6 +14,10 @@ const PortfolioCard = ({
         className="portfolio-image" 
         loading="lazy" 
       />
+      <div class="portfolio-overlay">
+            <h3 class="portfolio-title">{title}</h3>
+            <p class="portfolio-description">{description}</p>
+          </div>
   </div>;
 };
 

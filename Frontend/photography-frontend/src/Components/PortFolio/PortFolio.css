@@ -35,6 +35,52 @@
   background: rgba(247, 225, 181, 0.05); /* Very subtle glow background */
 }
 
+.portfolio-card {
+  position: relative; /* This is the "Anchor" */
+  overflow: hidden;
+  border-radius: 15px; /* Nice rounded corners like the example */
+  height: 300px; /* Or whatever fixed height you prefer */
+}
+
+.portfolio-image{
+  width: 100%;
+  height: 300px;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+
+}
+.portfolio-card:hover .portfolio-image {
+  transform: scale(1.07); 
+}
+.portfolio-overlay{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8)); /* Nice dark fade */
+  padding: 20px;
+  transform: translateY(10px); 
+  transition: transform 0.4s ease-out;
+  opacity: 0;
+}
+.portfolio-card:hover .portfolio-overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.portfolio-title {
+  color: gold;
+  margin: 0 0 5px 0;
+  font-size: 1.2rem;
+}
+
+.portfolio-description {
+  color: #ccc;
+  font-size: 0.9rem;
+  margin: 0;
+}
 /* Mobile adjustments */
 @media (max-width: 768px) {
   .filter-container {
